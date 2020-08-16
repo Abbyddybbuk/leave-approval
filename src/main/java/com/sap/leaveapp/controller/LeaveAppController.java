@@ -21,8 +21,18 @@ public class LeaveAppController {
 		this.leaveAppService = leaveAppService;
 	}
 
-	@RequestMapping(value = "/rrm/RouteCreate", method = RequestMethod.POST)
+	@RequestMapping(value = "/sap/leavecreate", method = RequestMethod.POST)
 	public List<HolidayDetail> createHoldiay(@RequestBody List<HolidayDetail> holidayDetailList) {
 		return leaveAppService.createHoliday(holidayDetailList);
 	}
+	
+	@RequestMapping(value = "/sap/leavecreatehystrix", method = RequestMethod.POST)
+	public List<HolidayDetail> createHoldiayHystrix(@RequestBody List<HolidayDetail> holidayDetailList) {
+		return leaveAppService.createHoliday(holidayDetailList);
+	}	
+	
+	@RequestMapping(value = "/sap/readAllData", method = RequestMethod.GET)
+	public List<HolidayDetail> readHoldiayData() {
+		return leaveAppService.readHoliday();
+	}	
 }

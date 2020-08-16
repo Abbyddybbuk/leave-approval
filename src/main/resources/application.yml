@@ -2,6 +2,11 @@ debug: false
 
 spring.jpa.show-sql: true
 spring.jpa.generate-ddl: false
+spring.rabbitmq.host: localhost
+spring.rabbitmq.port: 5672
+spring.rabbitmq.username: guest
+spring.rabbitmq.password: guest
+
 
 com.sap.icd.odatav2.spring:
    servicePath: leaveapp
@@ -24,5 +29,8 @@ spring:
       password:
       driver-class-name: org.h2.Driver
       url: jdbc:h2:~/leaveapprovaldb;DB_CLOSE_ON_EXIT=FALSE
-      
-RRMEXEC_STORE_URL: http://localhost:8095/rrm/routeupdate
+server:
+    port: 8089       
+    
+
+   

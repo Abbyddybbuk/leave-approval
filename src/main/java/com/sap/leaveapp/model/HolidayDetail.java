@@ -23,7 +23,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 public class HolidayDetail implements Serializable {
 	@Id
 	@UuidGenerator(name = "dId")
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "dId")
 	@Column(name = "D_ID", length = 36)
 	private String dId;
 
